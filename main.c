@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 void read_standard_input(void);
-void print_file(char* file_path);
+void print_file(char *file_path);
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
 	if(argc < 2) {
 		read_standard_input();
 	}
@@ -25,8 +25,8 @@ void read_standard_input(void) {
 	}
 }
 
-void print_file(char* file_path) {
-	FILE* file = fopen(file_path, "r");
+void print_file(char *file_path) {
+	FILE *file = fopen(file_path, "r");
 
 	if(!file) {
 		printf("kitten: %s: No such file or directory\n", file_path);
