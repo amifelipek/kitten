@@ -1,27 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void read_standard_input(void);
+void read_stdin(void);
 void print_file(char *file_path);
 
 int main(int argc, char **argv) {
 	if(argc < 2) {
-		read_standard_input();
+		read_stdin();
 	}
 
 	for(int i = 1; i < argc; i++) {
 		print_file(argv[i]);
 	}
-
-	exit(EXIT_SUCCESS);
 }
 
-void read_standard_input(void) {
-	char input[256];
+void read_stdin(void) {
+	int buffer_length = 256;
+	char buffer[buffer_length];
 
-	while(1) {
-		scanf("%s", input);
-		printf("%s\n", input);
+	while(fgets(buffer, buffer_length, stdin)) {
+		printf("%s", buffer);
 	}
 }
 
