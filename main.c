@@ -4,7 +4,8 @@
 void print_stdin(void);
 void print_file(char *file_path);
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 	if (argc < 2) {
 		print_stdin();
 	}
@@ -14,7 +15,8 @@ int main(int argc, char **argv) {
 	}
 }
 
-void print_stdin(void) {
+void print_stdin(void)
+{
 	int buffer_length = 256;
 	char buffer[buffer_length];
 
@@ -23,7 +25,8 @@ void print_stdin(void) {
 	}
 }
 
-void print_file(char *file_path) {
+void print_file(char *file_path)
+{
 	FILE *file = fopen(file_path, "r");
 
 	if (!file) {
