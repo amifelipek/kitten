@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void read_stdin(void);
+void print_stdin(void);
 void print_file(char *file_path);
 
 int main(int argc, char **argv) {
 	if (argc < 2) {
-		read_stdin();
+		print_stdin();
 	}
 
 	for (int i = 1; i < argc; i++) {
@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 	}
 }
 
-void read_stdin(void) {
+void print_stdin(void) {
 	int buffer_length = 256;
 	char buffer[buffer_length];
 
