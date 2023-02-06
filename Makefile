@@ -1,5 +1,5 @@
 BINARY_NAME := kit 
-COMPILE_FLAGS := -Wall -Wextra -Werror -std=c99 -pedantic
+COMPILE_FLAGS := -Os -O3 -Wall -Wextra -Werror -std=c99 -pedantic
 SRCS := main.c
 LINKS :=
 
